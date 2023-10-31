@@ -1,0 +1,226 @@
+swagger: '2.0'
+info:
+  title: Exam API
+  description: Test description
+  termsOfService: https://www.google.com/policies/terms/
+  contact:
+    email: contact@snippets.local
+  license:
+    name: BSD License
+  version: v1
+host: exam-cloudrun-r5c7oqswwq-as.a.run.app
+schemes:
+  - https
+basePath: /api/data
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /sales/:
+    get:
+      operationId: sales_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/albums/:
+    get:
+      operationId: sales_albums
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/artists/:
+    get:
+      operationId: sales_artists
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/customers/:
+    get:
+      operationId: sales_customers
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/invoice_items/:
+    get:
+      operationId: sales_invoice_items
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/invoices/:
+    get:
+      operationId: sales_invoices
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/query_customers/:
+    get:
+      operationId: sales_query_customers
+      description: ''
+      parameters:
+        - name: month
+          in: query
+          description: Invoice Month
+          type: number
+        - name: year
+          in: query
+          description: Invoice Year
+          type: number
+        - name: group_by
+          in: query
+          description: Group By
+          type: array
+          items:
+            type: string
+            enum:
+              - year
+              - month
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/query_sales/:
+    get:
+      operationId: sales_query_sales
+      description: ''
+      parameters:
+        - name: month
+          in: query
+          description: Invoice Month
+          type: number
+        - name: year
+          in: query
+          description: Invoice Year
+          type: number
+        - name: group_by
+          in: query
+          description: Group By
+          type: array
+          items:
+            type: string
+            enum:
+              - year
+              - month
+              - artist
+              - genre
+        - name: genre
+          in: query
+          description: Genre ID
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/query_transactions/:
+    get:
+      operationId: sales_query_transactions
+      description: ''
+      parameters:
+        - name: month
+          in: query
+          description: Invoice Month
+          type: number
+        - name: year
+          in: query
+          description: Invoice Year
+          type: number
+        - name: group_by
+          in: query
+          description: Group By
+          type: array
+          items:
+            type: string
+            enum:
+              - year
+              - month
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/query_units_sold/:
+    get:
+      operationId: sales_query_units_sold
+      description: ''
+      parameters:
+        - name: month
+          in: query
+          description: Invoice Month
+          type: number
+        - name: year
+          in: query
+          description: Invoice Year
+          type: number
+        - name: group_by
+          in: query
+          description: Group By
+          type: array
+          items:
+            type: string
+            enum:
+              - year
+              - month
+              - artist
+              - genre
+        - name: genre
+          in: query
+          description: Genre ID
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+  /sales/tracks/:
+    get:
+      operationId: sales_tracks
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - sales
+    parameters: []
+definitions: {}
